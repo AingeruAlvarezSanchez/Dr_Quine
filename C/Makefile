@@ -15,6 +15,8 @@ OBJ = $(patsubst src/%.c, $(OBJ_DIR)%.o, $(SRC))
 BIN_DIR = bin/
 BIN = $(patsubst src/%.c, $(BIN_DIR)%, $(SRC))
 
+.SECONDARY: $(OBJ)
+
 .PHONY: all
 all: $(BIN)
 
